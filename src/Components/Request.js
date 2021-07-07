@@ -3,7 +3,7 @@ import { db } from './firebase';
 import Search from "./search";
 
 
-const Todo = () => {
+const Request = () => {
 
   const [value, setValue] = useState('');
 
@@ -21,7 +21,7 @@ const Todo = () => {
     e.preventDefault();
     setLoader(true);
 
-    db.collection("collages")
+    db.collection("requests")
       .add({
         name: name,
         email: email,
@@ -29,7 +29,7 @@ const Todo = () => {
       })
       .then(() => {
         setLoader(false);
-        alert("Thanks for Review see you next time 👍");
+        alert("Your Request is submited 👍");
       })
       .catch((error) => {
         alert(error.message);
@@ -43,7 +43,7 @@ const Todo = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit} id="Contact">
-      <h1 className="contact"><spam className="start"> | </spam>Contact Me </h1>
+      <h1 className="contact"><spam className="start"> | </spam>Add the College name of yours and i'll verifiy it and approve it 😁🤝</h1>
       <div>Input value: {value}</div>
       <input value={value} onChange={onChange} />
 
@@ -80,4 +80,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default Request;

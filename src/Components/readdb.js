@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
+import { useHistory } from "react-router-dom";
+import Colleges from "./Colleges";
 import Connect from './Connect'
 
 
 export default function Todolist(props) {
+  const history = useHistory();
   const [collages, setCollages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [name , setName] = useState(props.msg);
@@ -17,7 +20,10 @@ export default function Todolist(props) {
     setValue(event.target.value);
   };
 
- 
+ const handleHistroy = () => {
+   history.push("/Colleges")
+ }
+
   const ref = db.collection("collages")
 
   function getCollages() {
@@ -41,36 +47,43 @@ export default function Todolist(props) {
   // ADD FUNCTION
   function addSchool(newSchool) {
     ref
-      //.doc() use if for some reason you want that firestore generates the id
-      .doc(newSchool.id)
+      .doc("college") // use if for some reason you want that firestore generates the id
+      // .doc(newSchool.id)
       .set(newSchool)
+      .then(() => {
+        setLoading(false);
+        alert("Your College is in the Collections 🤝 ");
+        handleHistroy()
+      })
       .catch((err) => {
         console.error(err);
       });
   }
 
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
+  // if (loading) {
+  //   return <h1>Loading...</h1>;
+  // }
 
   return (
     <div>
-      <h1>readdb du</h1>
+      {/* <h1>readdb du</h1> */}
       {collages.map((collage) => (
         <div key={collage.name}>
-          <h2>{collage.name}</h2>
+          {/* <h2>{collage.name}</h2> */}
           {/* <Connect result={collage.name} /> */}
 
           {/* <h2>{collage.pic}</h2> */}
-          <h2>{collage.email}</h2>
-          <p>{collage.message}</p>
+          {/* <h2>{collage.email}</h2> */}
+          {/* <p>{collage.message}</p> */}
         </div>
-      ))}
+        
+      )
+      )    }
       <div className="input-b">
-        {/* <h3>Add New</h3>
-        <h1>search : {props.msg}</h1>
-        <div>Input value: {value}</div>
-        <input value={value} placeholder='doc-id' onChange={onChange} /> */}
+        {/* <h3>Add New</h3> */}
+        {/* <h1>search : {props.msg}</h1> */}
+        {/* <div>Input value: {value}</div> */}
+        {/* <input value={value} placeholder='doc-id' onChange={onChange} /> */}
         <input
           className="name-in"
           type="text"
@@ -79,7 +92,7 @@ export default function Todolist(props) {
           onChange={(e) => setName(e.target.value)}
         />
         {/* <textarea value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} /> */}
-        <button className="button" onClick={() => addSchool({ name })}>Search</button>
+       <button className="button" onClick={() => addSchool({ name })}>Search</button>
       </div>
 
     </div>
