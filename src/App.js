@@ -1,5 +1,5 @@
 import React from "react";
-// import "./App.css";
+import "./App.css";
 import Search from "./Components/search";
 import ReadDb from "./Components/readdb";
 import { BrowserRouter, Route, } from 'react-router-dom'
@@ -10,9 +10,9 @@ import Todolist from "./Components/Todolist";
 function App() {
   return (
     <div>
-      <Connect />
+      {/* <Connect /> */}
       {/* <Search /> */}
-      {/* <MainPage /> */}
+      <MainPage />
       {/* <Todolist /> */}
     </div>
   );

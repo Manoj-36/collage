@@ -66,19 +66,20 @@ export default function Todolist(props) {
           <p>{collage.message}</p>
         </div>
       ))}
-      <div className="inputBox">
-        <h3>Add New</h3>
+      <div className="input-b">
+        {/* <h3>Add New</h3>
         <h1>search : {props.msg}</h1>
         <div>Input value: {value}</div>
-        <input value={value} placeholder='doc-id' onChange={onChange} />
+        <input value={value} placeholder='doc-id' onChange={onChange} /> */}
         <input
+          className="name-in"
           type="text"
           value={name}
-          placeholder='Name'
+          // placeholder='Name'
           onChange={(e) => setName(e.target.value)}
         />
-        <textarea value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} />
-        <button onClick={() => addSchool({ name, email })}>Submit</button>
+        {/* <textarea value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} /> */}
+        <button className="button" onClick={() => addSchool({ name })}>Search</button>
       </div>
 
     </div>
