@@ -1,11 +1,10 @@
 import React from "react";
-import { db } from "./firebase";
-import{Link} from 'react-router-dom'
-import clg from "./images/clg.png";
 import Search from "./search";
+import{Link} from 'react-router-dom'
+import clg from './images/clg.png'
 import Footer from "./footer";
 
-export default function MainPage() {
+export default function Home() {
   return (
     <div className="container">
       <img className="icon" src={clg} />
@@ -18,8 +17,7 @@ export default function MainPage() {
           <Link to='/Request'><span className="ac">Add college</span></Link>
         </span>
       </div>
-      <Footer />
-      <Search />
+        <Footer />
     </div>
   );
 }

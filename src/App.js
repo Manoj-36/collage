@@ -3,9 +3,9 @@ import "./App.css";
 import Search from "./Components/search";
 import ReadDb from "./Components/readdb";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MainPage from "./Components/MainPage";
 import Connect from "./Components/Connect";
 import Footer from "./Components/footer";
+import Home from "./Components/Home";
 import Colleges from "./Components/Colleges";
 import Request from "./Components/Request";
 import Todolist from "./Components/Todolist";
@@ -15,8 +15,8 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route exact path="/Mainpage">
-            <MainPage />
+          <Route exact path="/">
+            <Home />
           </Route>
         </Switch>
         <Switch>
