@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
         <div className="footer">
             <h1 className="f-head">RateMy<span className="f-h-c">College</span></h1>
-            <h2 className="f-ac">Add college</h2>
-            <h2 className="f-abt">about us </h2>
-            <h2 className="f-c">Contact us</h2>
+            <Link to="/Colleges"><h2 className="f-ac">Add college</h2></Link>
+            <Link><h2 className="f-abt">about us </h2></Link>
+            <Link><h2 className="f-c">Contact us</h2></Link>
         </div>
     )
 }

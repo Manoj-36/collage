@@ -7,6 +7,9 @@ export default function Todolist(props) {
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [clg, setClg] = useState(props.clgName)
+  useEffect(() => { setClg(props.clgName)}, [props.clgName] )
+
 
   // to take input from user
   const [value, setValue] = useState("");
@@ -16,7 +19,7 @@ export default function Todolist(props) {
   };
 
  
-  const ref = db.collection("collages")
+  const ref = db.collection(clg)
 
   function getCollages() {
     setLoading(true);
@@ -31,7 +34,6 @@ export default function Todolist(props) {
   }
 
 
-
   useEffect(() => {
     getCollages();
   }, []);
@@ -39,9 +41,13 @@ export default function Todolist(props) {
   // ADD FUNCTION
   function addSchool(newSchool) {
     ref
-      //.doc() use if for some reason you want that firestore generates the id
+      // db.collection("college").doc(clg) 
       .doc(newSchool.id)
       .set(newSchool)
+      .then(() => {
+        setLoading(false);
+        alert("Your Review is submited Succesfully 😁 ");
+      })
       .catch((err) => {
         console.error(err);
       });
@@ -53,20 +59,19 @@ export default function Todolist(props) {
 
   return (
     <div>
-      <h1>collages</h1>
+      <h1>Reviews</h1>
       {collages.map((collage) => (
         <div key={collage.name}>
           <h2>{collage.name}</h2>
-          {/* <h2>{collage.pic}</h2> */}
           <h2>{collage.email}</h2>
-          <p>{collage.message}</p>
+          {/* <p>{collage.message}</p> */}
         </div>
       ))}
       <div className="inputBox">
         <h3>Add New</h3>
-        <h1>search : {props.msg}</h1>
-        <div>Input value: {value}</div>
-        <input value={value} placeholder='doc-id' onChange={onChange} />
+        {/* <h1>search : {props.msg}</h1> */}
+        {/* <div>Input value: {value}</div> */}
+        {/* <input value={value} placeholder='doc-id' onChange={onChange} /> */}
         <input
           type="text"
           value={name}

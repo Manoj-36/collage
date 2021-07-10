@@ -25,6 +25,11 @@ function App() {
           </Route>
         </Switch>
         <Switch>
+          <Route exact path="/ReadDb">
+          <ReadDb />
+          </Route>
+        </Switch>
+        <Switch>
           <Route exact path="/Request">
           <Request />
           </Route>

@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
 import { useHistory } from "react-router-dom";
 import Colleges from "./Colleges";
+import SIcon from "./images/search.png"
 import Connect from './Connect'
 
 
-export default function Todolist(props) {
+export default function Readdb(props) {
   const history = useHistory();
   const [collages, setCollages] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -92,7 +93,7 @@ export default function Todolist(props) {
           onChange={(e) => setName(e.target.value)}
         />
         {/* <textarea value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} /> */}
-       <button className="button" onClick={() => addSchool({ name })}>Search</button>
+       <button className="button" onClick={() => addSchool({ name })}><img className="s-icon" src={SIcon} /></button>
       </div>
 
     </div>
