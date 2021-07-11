@@ -16,10 +16,10 @@ export default function Home() {
       <Search />
       <div className="btm">
         <span>
-          <Link to="/collage-review-system/Colleges">
+          <Link to="/collage/Colleges">
             <span className="wr">Write rview</span>
           </Link>
-          <Link to="/collage-review-system/Request">
+          <Link to="/collage/Request">
             <span className="ac">Add college</span>
           </Link>
         </span>
