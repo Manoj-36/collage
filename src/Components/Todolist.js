@@ -1,25 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
-
+import like from './images/like.png'
+import Dislike from './images/dislike.png'
 
 export default function Todolist(props) {
   const [collages, setCollages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [clg, setClg] = useState(props.clgName)
-  useEffect(() => { setClg(props.clgName)}, [props.clgName] )
+  const [review, setReview] = useState("");
 
+  const [loader, setLoader] = useState(false);
+
+
+  const [clg, setClg] = useState(props.clgName);
+  useEffect(() => {
+    setClg(props.clgName);
+  }, [props.clgName]);
 
   // to take input from user
   const [value, setValue] = useState("");
 
   const onChange = (event) => {
     setValue(event.target.value);
+    setLoader(true);
+
   };
 
- 
-  const ref = db.collection(clg)
+  const ref = db.collection(clg);
 
   function getCollages() {
     setLoading(true);
@@ -33,7 +41,6 @@ export default function Todolist(props) {
     });
   }
 
-
   useEffect(() => {
     getCollages();
   }, []);
@@ -41,11 +48,11 @@ export default function Todolist(props) {
   // ADD FUNCTION
   function addSchool(newSchool) {
     ref
-      // db.collection("college").doc(clg) 
+      // db.collection("college").doc(clg)
       .doc(newSchool.id)
       .set(newSchool)
       .then(() => {
-        setLoading(false);
+        setLoader(false);
         alert("Your Review is submited Succesfully 😁 ");
       })
       .catch((err) => {
@@ -59,30 +66,57 @@ export default function Todolist(props) {
 
   return (
     <div>
-      <h1>Reviews</h1>
+      <h1 className="clg-reviews"> All Reviews</h1>
       {collages.map((collage) => (
-        <div key={collage.name}>
-          <h2>{collage.name}</h2>
-          <h2>{collage.email}</h2>
+        <div className="rv-container" key={collage.name}>
+          <h1 className="rv-arrow">></h1>
+          <h2 className="clg-rec">{collage.review}</h2>
+          <h2 className="clg-name">{collage.name}</h2>
+          <h2 className="clg-msg">{collage.email}</h2>
+          <hr className="clg-line" />
           {/* <p>{collage.message}</p> */}
         </div>
       ))}
       <div className="inputBox">
-        <h3>Add New</h3>
+        <h3 className="clg-wrv">Write Review</h3>
+        <p className="i-msg">Select any one for Recommend to viewers</p>
         {/* <h1>search : {props.msg}</h1> */}
         {/* <div>Input value: {value}</div> */}
         {/* <input value={value} placeholder='doc-id' onChange={onChange} /> */}
+
+        <select
+          className="rv-rec"
+          value={review}
+          onChange={(e) => {
+            const setR = e.target.value;
+            setReview(setR);
+          }}
+        >
+          <option value="Select">Select</option>
+          <option value=" 👍 Recommend"> 👍 Recommend</option>
+          <option value=" 👎 Not Recommend"> 👎 Not Recommend</option>
+          {/* {review} */}
+        </select>
         <input
+          className="rv-i-name"
           type="text"
           value={name}
-          placeholder='Name'
+          placeholder=" Student or staffs "
           onChange={(e) => setName(e.target.value)}
         />
-        <textarea value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} />
-        <button onClick={() => addSchool({ name, email })}>Submit</button>
+        <textarea
+          className="rv-i-msg"
+          value={email}
+          placeholder="Review"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button
+          className="rv-button"
+          onClick={() => addSchool({ name, email, review })}
+        >
+          Submit
+        </button>
       </div>
-     
     </div>
   );
 }
-

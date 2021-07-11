@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .icon {
   padding: 2% 0% 0% 2%;
   width: 5%;
@@ -8,12 +9,15 @@
   align-items: center;
   /* background-color: #000; */
   /* background-image: url('./Components/images/way.jpg'); */
-  background: linear-gradient(rgba(0, 0, 0, 0.595), rgba(0, 0, 0, 0.595)), url("https://source.unsplash.com/1600x900/?university");
+
+  background: linear-gradient(rgba(0, 0, 0, 0.595), rgba(0, 0, 0, 0.595)),
+    url("https://source.unsplash.com/1600x900/?university");
   position: relative;
 }
 .hello {
   color: rgb(252, 249, 249);
   font-family: "Poppins", sans-serif;
+  font-weight: bold;
   font-size: 1.5rem;
   margin-left: 6%;
   margin-top: -3%;
@@ -36,9 +40,9 @@
 }
 
 .btm {
-  margin-top: 3%;
+  margin-top: 5%;
   text-align: center;
-  padding-bottom: 9%;
+  padding-bottom: 11%;
 }
 .wr {
   color: #fff;
@@ -50,13 +54,13 @@
   width: 5%;
   color: rgb(248, 245, 245);
   height: 35px;
-  margin-top: -.4%;
+  margin-top: -0.4%;
   border-radius: 5px;
   margin-left: 67%;
   position: relative;
   z-index: 1;
 }
-.s-icon{
+.s-icon {
   width: 40%;
   margin-left: 25%;
 }
@@ -69,7 +73,7 @@
   padding-left: 5%;
 }
 .name-in {
-  width: .1%;
+  width: 0.1%;
   color: rgba(236, 241, 241, 0);
   background-color: rgba(30, 173, 173, 0);
 }
@@ -85,62 +89,143 @@
 }
 .f-h-c {
   color: rgb(0, 140, 255);
+  font-weight: bold;
   font-family: "Poppins", sans-serif;
-
 }
-.f-abt{
+.f-abt {
   margin-left: 70%;
   font-size: 1.3rem;
   margin-top: -7%;
   color: #fff;
 }
-.f-c{
+.f-c {
   margin-left: 70%;
   font-size: 1.3rem;
   margin-top: 2%;
   color: #fff;
   padding-bottom: 5%;
 }
-.f-ac{
+.f-ac {
   margin-left: 20%;
-  font-size:1.3rem ;
+  font-size: 1.3rem;
   margin-top: 2%;
   color: #fff;
 }
 
-
-.nav-icon{
+.nav-icon {
   margin: 2% 2% 0% 3%;
   width: 3%;
 }
-.nav-head{
+.nav-head {
   margin-left: 7%;
   margin-top: -3%;
   font-family: "Poppins", sans-serif;
- font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
-.clg-container{
-  /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://source.unsplash.com/1600x900/?university"); */
-
-}
-.clg-name-container{
+.clg-name-container {
   width: 95%;
   border-radius: 15px;
   margin-top: 2%;
   margin-left: 2%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://source.unsplash.com/1600x900/?university");
-
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://source.unsplash.com/1600x900/?nature");
 }
-.clg-head{
-  font-family: 'Ubuntu', sans-serif;
+.clg-head {
+  font-family: "Ubuntu", sans-serif;
   font-size: 2rem;
   color: #fff;
-  padding-top: 5%;
+  padding-top: 10%;
   height: 20rem;
   text-align: center;
+}
+
+.clg-reviews {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(100, 98, 98);
+  text-align: center;
+  padding: 3%;
+}
+.clg-line{
+  color: rgb(51, 50, 50);
+  background-color: rgb(66, 66, 66);
+  height: 2px;
+}
+.rv-arrow{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: crimson;
+  margin-left: -5%;
+}
+.rv-container{
+width: 50%;
+margin: 2% 0 0 25%;
+font-family: 'Poppins', sans-serif;
+font-weight:300;
+float:inline-end;
+/* background-color: rgb(189, 194, 194); */
+}
+.clg-wrv{
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(100, 98, 98);
+  text-align: center;
+  padding: 3% 0 2% 2%;
+}
+.clg-name,.clg-msg{
+  margin:2% 0 0 5%;
+}
+.clg-rec{
+  font-weight: bold;
+}
+.inputBox{
+  display: flex;
+  flex-direction: column;
+}
+.i-msg{
+  color:rgba(220, 20, 60, 0.842);
+  text-align: center;
+}
+.rv-rec{
+  border:#aaa 1px solid;
+  width: 15%;
+  border-radius: 5px;
+  margin-left: 42%;
+  height: 2rem;
+}
+.rv-i-name{
+  border: #aaa 1px solid;
+  width: 30%;
+  margin:2% 0 0 35%;
+  height: 2rem;
+  border-radius: 5px;
+
 
 }
+.rv-i-msg{
+  border: #aaa 1px solid; 
+  width: 30%;
+  margin:2% 0 0 35% ;
+  border-radius: 5px;
+  height: 5rem;
+}
+.rv-button{
+  border: rgb(84, 81, 238) 2px solid;
+  width: 20%;
+  height: 2.5rem;
+  margin: 2% 0 5% 40%;
+  border-radius: 5px;
+}
+/* .wrv-line{
+  color: #aaa;
+  background-color: #aaa;
+  height: 1.5px;
+  width: 30%;
+  margin-left: 35%;
+} */
 
 /* this for search styling */
 body {
