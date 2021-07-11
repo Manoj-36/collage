@@ -8,7 +8,7 @@ const Nav = () => {
     <div className="nav-container">
       <div>
         <img className="nav-icon" src={Clg} />
-        <Link to="/">
+        <Link to="/collage-review-system">
           <h1 className="nav-head">
             RateMy<span className="f-h-c">College</span>
           </h1>

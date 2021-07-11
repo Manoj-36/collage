@@ -15,22 +15,22 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/collage-review-system">
             <Home />
           </Route>
         </Switch>
         <Switch>
-          <Route exact path="/Colleges">
+          <Route exact path="/collage-review-system/Colleges">
           <Colleges />
           </Route>
         </Switch>
         <Switch>
-          <Route exact path="/ReadDb">
+          <Route exact path="/collage-review-system/ReadDb">
           <ReadDb />
           </Route>
         </Switch>
         <Switch>
-          <Route exact path="/Request">
+          <Route exact path="/collage-review-system/Request">
           <Request />
           </Route>
         </Switch>
