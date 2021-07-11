@@ -22,7 +22,7 @@ export default function Readdb(props) {
   };
 
  const handleHistroy = () => {
-   history.push("/Colleges")
+   history.push("/collage/Colleges")
  }
 
   const ref = db.collection("collages")
