@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/collage-review-system/static/css/main.c76e3ef1.chunk.css",
-    "main.js": "/collage-review-system/static/js/main.dac26bd6.chunk.js",
-    "main.js.map": "/collage-review-system/static/js/main.dac26bd6.chunk.js.map",
-    "runtime-main.js": "/collage-review-system/static/js/runtime-main.c194e0f2.js",
-    "runtime-main.js.map": "/collage-review-system/static/js/runtime-main.c194e0f2.js.map",
-    "static/js/2.0e9f6d8e.chunk.js": "/collage-review-system/static/js/2.0e9f6d8e.chunk.js",
-    "static/js/2.0e9f6d8e.chunk.js.map": "/collage-review-system/static/js/2.0e9f6d8e.chunk.js.map",
-    "static/js/3.e685f6aa.chunk.js": "/collage-review-system/static/js/3.e685f6aa.chunk.js",
-    "static/js/3.e685f6aa.chunk.js.map": "/collage-review-system/static/js/3.e685f6aa.chunk.js.map",
-    "index.html": "/collage-review-system/index.html",
-    "static/css/main.c76e3ef1.chunk.css.map": "/collage-review-system/static/css/main.c76e3ef1.chunk.css.map",
-    "static/js/2.0e9f6d8e.chunk.js.LICENSE.txt": "/collage-review-system/static/js/2.0e9f6d8e.chunk.js.LICENSE.txt",
-    "static/media/search.f8c022bb.png": "/collage-review-system/static/media/search.f8c022bb.png"
+    "main.css": "/collage/static/css/main.c76e3ef1.chunk.css",
+    "main.js": "/collage/static/js/main.747f05ea.chunk.js",
+    "main.js.map": "/collage/static/js/main.747f05ea.chunk.js.map",
+    "runtime-main.js": "/collage/static/js/runtime-main.6eee8a7e.js",
+    "runtime-main.js.map": "/collage/static/js/runtime-main.6eee8a7e.js.map",
+    "static/js/2.4e65869d.chunk.js": "/collage/static/js/2.4e65869d.chunk.js",
+    "static/js/2.4e65869d.chunk.js.map": "/collage/static/js/2.4e65869d.chunk.js.map",
+    "static/js/3.e685f6aa.chunk.js": "/collage/static/js/3.e685f6aa.chunk.js",
+    "static/js/3.e685f6aa.chunk.js.map": "/collage/static/js/3.e685f6aa.chunk.js.map",
+    "index.html": "/collage/index.html",
+    "static/css/main.c76e3ef1.chunk.css.map": "/collage/static/css/main.c76e3ef1.chunk.css.map",
+    "static/js/2.4e65869d.chunk.js.LICENSE.txt": "/collage/static/js/2.4e65869d.chunk.js.LICENSE.txt",
+    "static/media/search.f8c022bb.png": "/collage/static/media/search.f8c022bb.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c194e0f2.js",
-    "static/js/2.0e9f6d8e.chunk.js",
+    "static/js/runtime-main.6eee8a7e.js",
+    "static/js/2.4e65869d.chunk.js",
     "static/css/main.c76e3ef1.chunk.css",
-    "static/js/main.dac26bd6.chunk.js"
+    "static/js/main.747f05ea.chunk.js"
   ]
 }
