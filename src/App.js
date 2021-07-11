@@ -30,7 +30,7 @@ function App() {
           </Route>
         </Switch>
         <Switch>
-          <Route exact path="/collage-review-system/Request">
+          <Route exact path="/collage/Request">
           <Request />
           </Route>
         </Switch>
