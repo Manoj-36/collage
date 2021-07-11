@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { db } from './firebase';
 import Search from "./search";
+import Footer from "./footer";
+import Nav from './Nav'
 
 
 const Request = () => {
@@ -21,7 +23,7 @@ const Request = () => {
     e.preventDefault();
     setLoader(true);
 
-    db.collection("requests")
+    db.collection("Requests")
       .add({
         name: name,
         email: email,
@@ -43,39 +45,44 @@ const Request = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit} id="Contact">
-      <h1 className="contact"><spam className="start"> | </spam>Add the College name of yours and i'll verifiy it and approve it 😁🤝</h1>
-      <div>Input value: {value}</div>
-      <input value={value} onChange={onChange} />
+      
+      <h1 className="rq-contact">Add College</h1>
+      <p className="rq-msg">I'll verify and prove it  </p>
+      {/* <div>Input value: {value}</div>
+      <input value={value} onChange={onChange} /> */}
 
-      <label>Name</label>
+      {/* <label>Name</label> */}
       <input
-        placeholder="Name"
+      className="rq-i"
+        placeholder="College Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
 
-      <label>Email</label>
+      {/* <label>Email</label> */}
       <input
-        placeholder="Email"
+      className="rq-i"
+        placeholder="Your Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
 
-      <label>Message</label>
+      {/* <label>Message</label> */}
       <textarea
-      className="msg"
+      className="rq-txt"
         placeholder="Message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       ></textarea>
 
       <button
+      className="rq-button"
         type="submit"
         style={{ background: loader ? "#ccc" : " #0066ff00" }}
       >
-        Submit
+        Request
       </button>
-
+      <Footer />
     </form>
   );
 };
