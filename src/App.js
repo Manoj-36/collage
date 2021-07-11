@@ -15,7 +15,7 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route exact path="/collage-review-system">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
