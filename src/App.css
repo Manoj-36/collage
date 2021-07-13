@@ -425,10 +425,16 @@ body {
   }
 
   /* colleges */
-
+.clg-head{
+  padding-top: 20%;
+  font-size: 1.8rem;
+}
   .rv-container {
+    width: 80%;
     margin-bottom: 10%;
+    margin-left: 10%;
   }
+ 
   .rv-rec {
     margin-top: 5%;
     width: 70%;
