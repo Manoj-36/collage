@@ -61,30 +61,16 @@ export default function Readdb(props) {
       });
   }
 
-  // if (loading) {
-  //   return <h1>Loading...</h1>;
-  // }
-
   return (
     <div>
       {/* <h1>readdb du</h1> */}
       {collages.map((collage) => (
         <div key={collage.name}>
-          {/* <h2>{collage.name}</h2> */}
-          {/* <Connect result={collage.name} /> */}
-
-          {/* <h2>{collage.pic}</h2> */}
-          {/* <h2>{collage.email}</h2> */}
-          {/* <p>{collage.message}</p> */}
         </div>
         
       )
       )    }
       <div className="input-b">
-        {/* <h3>Add New</h3> */}
-        {/* <h1>search : {props.msg}</h1> */}
-        {/* <div>Input value: {value}</div> */}
-        {/* <input value={value} placeholder='doc-id' onChange={onChange} /> */}
         <input
           className="name-in"
           type="text"

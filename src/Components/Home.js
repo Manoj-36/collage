@@ -17,7 +17,7 @@ export default function Home() {
       <div className="btm">
         <span>
           <Link to="/collage/Colleges">
-            <span className="wr">Write rview</span>
+            <span className="wr">Write review</span>
           </Link>
           <Link to="/collage/Request">
             <span className="ac">Add college</span>
