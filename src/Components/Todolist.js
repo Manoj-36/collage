@@ -73,7 +73,7 @@ export default function Todolist(props) {
           <h2 className="clg-rec">{collage.review}</h2>
           <u><h2 className="clg-name">{collage.name}</h2></u>
           <h2 className="clg-msg">{collage.email}</h2>
-          <hr className="clg-line" />
+          {/* <hr className="clg-line" /> */}
           {/* <p>{collage.message}</p> */}
         </div>
       ))}
@@ -93,8 +93,8 @@ export default function Todolist(props) {
           }}
         >
           <option value="Select">Select</option>
-          <option className="rv-op" value=" 👍 Recommend"> 👍 Recommend</option>
-          <option className="rv-op" value=" 👎 Not Recommend"> 👎 Not Recommend</option>
+          <option className="rv-op" value=" 👍 Recommend"> Recommend</option>
+          <option className="rv-op" value=" 👎 Not Recommend"> Not Recommend</option>
           {/* {review} */}
         </select>
         <input

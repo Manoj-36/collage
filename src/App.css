@@ -188,12 +188,14 @@
   margin-left: -5%;
 }
 .rv-container {
-  width: 60%;
+  width: 55%;
   margin: 2% 0 0 25%;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  height: 10rem;
+  border-radius: 8px;
   float: inline-end;
-  /* background-color: rgb(189, 194, 194); */
+  background-color: rgb(237, 238, 238);
 }
 .clg-wrv {
   font-family: "Poppins", sans-serif;
@@ -205,10 +207,11 @@
 }
 .clg-name,
 .clg-msg {
-  margin: 2% 0 0 5%;
+  margin: 2% 0 0 10%;
 }
 .clg-rec {
   font-weight: bold;
+  margin-left: 5%;
 }
 .inputBox {
   display: flex;
@@ -220,9 +223,9 @@
 }
 .rv-rec {
   border: #aaa 1px solid;
-  width: 15%;
+  width: 30%;
   border-radius: 5px;
-  margin-left: 42%;
+  margin-left: 35%;
   height: 2rem;
 }
 .rv-i-name {
@@ -396,13 +399,8 @@ body {
   }
   .s-icon{
     margin-top: -60%;
-    fill: black;
   }
-  @media  (prefers-color-scheme: dark){
-       .s-icon{
-         fill:white;
-       }  
-  }
+  
     
   .button {
     width: 15%;
@@ -433,8 +431,9 @@ body {
   }
   .rv-rec {
     margin-top: 5%;
-    width: 40%;
-    margin-left: 30%;
+    width: 70%;
+    margin-left: 15%;
+    height: 3rem;
     font-size: 1rem;
   }
   .rv-i-msg {
