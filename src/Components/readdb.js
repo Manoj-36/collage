@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
 import { useHistory } from "react-router-dom";
 import Colleges from "./Colleges";
-import SIcon from "./images/search.png"
+import SIcon from "./images/search.svg"
 import Connect from './Connect'
 
 
@@ -93,7 +93,7 @@ export default function Readdb(props) {
           onChange={(e) => setName(e.target.value)}
         />
         {/* <textarea value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} /> */}
-       <button className="button" onClick={() => addSchool({ name })}><img className="s-icon" src={SIcon} /></button>
+       <button className="button" onClick={() => addSchool({ name })}><img rel="icon" type="image/svg+xml" className="s-icon" src={SIcon} /></button>
       </div>
 
     </div>

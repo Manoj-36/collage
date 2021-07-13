@@ -367,9 +367,9 @@ body {
 
 @media only screen and (max-width: 769px) {
   .icon {
-    width: 12%;
+    width: 11%;
     padding-top: 12%;
-    margin-left: 15%;
+    margin-left: 18%;
   }
   .hello {
     font-size: 1.5rem;
@@ -377,7 +377,7 @@ body {
     margin-top: -9%;
   }
   .main-head {
-    margin-top: 50%;
+    margin-top: 60%;
     padding: 5% 5% 0 5%;
     font-size: 1.6rem;
     text-align: center;
@@ -390,15 +390,25 @@ body {
   }
   .react-autosuggest__suggestions-container--open {
     margin-left: 10%;
-    width: 65%;
+    width: 80%;
+    margin-top: -2%;
     font-size: 0.8rem;
   }
+  .s-icon{
+    margin-top: -70%;
+    fill: black;
+  }
+  @media  (prefers-color-scheme: dark){
+       .s-icon{
+         fill:white;
+       }  
+  }
+    
   .button {
     width: 15%;
-    margin-top: -55%;
     margin-left: 75%;
     position: relative;
-    z-index: 5;
+    z-index: 1;
   }
   .wr {
     font-size: 0.8rem;
@@ -493,13 +503,13 @@ body {
     text-align: center;
   }
   .nav-icon {
-    width: 10%;
-    margin-left: 18%;
+    width: 9%;
+    margin-left: 20%;
     margin-top: 10%;
   }
   .nav-head {
     text-align: center;
-    margin-top: -10%;
+    margin-top: -9%;
     margin-bottom: 5%;
   }
 }
