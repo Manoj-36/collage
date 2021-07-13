@@ -395,7 +395,7 @@ body {
     font-size: 0.8rem;
   }
   .s-icon{
-    margin-top: -70%;
+    margin-top: -60%;
     fill: black;
   }
   @media  (prefers-color-scheme: dark){
