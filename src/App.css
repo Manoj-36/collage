@@ -366,6 +366,15 @@ body {
   font-weight: bold;
 }
 
+.loading{
+  width: 50%;
+  margin-top: 25%;
+  margin-left: 25%;
+}
+.pagenot{
+  width: 100%;
+}
+
 /* for other screens */
 
 @media only screen and (max-width: 769px) {

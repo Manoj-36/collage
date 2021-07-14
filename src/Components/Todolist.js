@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
 import like from './images/like.png'
+import Load from './images/load.gif'
+import F from './images/404.jpg'
 import Dislike from './images/dislike.png'
 
 export default function Todolist(props) {
@@ -55,13 +57,18 @@ export default function Todolist(props) {
         setLoader(false);
         alert("Your Review is submited Succesfully 😁 ");
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(() => {
+        return <div>
+            <img className="pagenot" src={F}/>
+        </div>
+        // console.error(err);
       });
   }
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <div>
+      <img className="loading" src={Load}/>
+    </div>;
   }
 
   return (
@@ -83,7 +90,6 @@ export default function Todolist(props) {
         {/* <h1>search : {props.msg}</h1> */}
         {/* <div>Input value: {value}</div> */}
         {/* <input value={value} placeholder='doc-id' onChange={onChange} /> */}
-
         <select
           className="rv-rec"
           value={review}

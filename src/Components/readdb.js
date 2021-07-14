@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
 import { useHistory } from "react-router-dom";
 import Colleges from "./Colleges";
+import F from './images/404.jpg'
 import SIcon from "./images/search.svg"
 import Connect from './Connect'
 
@@ -53,11 +54,14 @@ export default function Readdb(props) {
       .set(newSchool)
       .then(() => {
         setLoading(false);
-        alert("Your College is in the Collections 🤝 ");
+        // alert("Your College is in the Collections 🤝 ");
         handleHistroy()
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(() => {
+        return <div>
+          <img className="pagenot" src={F} />
+        </div>
+        // console.error(err);
       });
   }
 
