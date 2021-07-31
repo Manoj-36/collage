@@ -53,6 +53,9 @@ const languages = [
     name: "Sri Siddhartha Institute of Technology, Tumkur",
   },
   {
+    name: "Siddaganga Institute of Technology, Tumkur",
+  },
+  {
     name: "Global Academy of Technology, Bangalore",
   },
   {
