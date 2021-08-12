@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
+import F from './images/404.jpg'
 import Todolist from "./Todolist";
 import Footer from "./footer";
 import Nav from "./Nav";
@@ -52,7 +53,9 @@ export default function Colleges(props) {
   }
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <div>
+    <img className="pagenot" src={F}/>
+</div>
   }
 
   return (
