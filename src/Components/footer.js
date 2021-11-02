@@ -8,7 +8,7 @@ export default function Footer() {
             <Link to="/collage/Request"><h2 className="f-ac">Add college</h2></Link>
             <Link><h2 className="f-abt">about us </h2></Link>
             {/* <h2 className="f-c">Contact us</h2> */}
-            <a href="mailto:bjmanoj7@gmail.com"><h2 className="f-c">bjmanoj7@gmail.com</h2></a>
+            <a href="mailto:bjmanoj7@gmail.com"><h2 className="f-c">Mail me</h2></a>
         </div>
     )
 }

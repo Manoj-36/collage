@@ -204,7 +204,7 @@
   margin: 2% 0 0 25%;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  height: 10rem;
+  height: fit-content;
   border-radius: 8px;
   float: inline-end;
   background-color: rgb(237, 238, 238);
@@ -219,7 +219,11 @@
 }
 .clg-name,
 .clg-msg {
-  margin: 2% 0 0 10%;
+  /* padding: 2%; */
+  margin: 2% 0 0% 10%;
+}
+.clg-msg {
+  padding: 0 0 3% 0;
 }
 .clg-rec {
   font-weight: bold;
