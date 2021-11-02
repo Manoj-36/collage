@@ -1,0 +1,6 @@
+{
+  "appId": "com.RateMyCollege.app",
+  "appName": "RateMyCollege",
+  "webDir": "build",
+  "bundledWebRuntime": false
+}
